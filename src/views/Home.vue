@@ -1,7 +1,7 @@
 <template>
     <main> 
         <div class="slider-container">
-            <section class="slider-box" :style="{ left: left + 'px' }">
+            <section class="slider-box" :style="{ left: '-' + left + 'px' }">
                 <ul>
                     <li></li>
                     <li></li>
