@@ -1,7 +1,7 @@
 <template>
     <main> 
         <div class="slider-container">
-            <section class="slider-box" :style="{ left: '-' + left + 'px' }">
+            <section class="slider-box" :style="{ left: left + 'px' }">
                 <ul>
                     <li></li>
                     <li></li>
@@ -31,25 +31,25 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
+@Component
 export default class Home extends Vue {
     private dot: number = 0;
     private left: number = 0;
-    private timer: any;
 
     private mounted() {
-        let that = this;
-        this.timer = setInterval(function() {
-            if (that.dot === 4) {
-                that.dot = 0;
-                that.left = 0;
-            } else if (that.dot < 4) {
-                that.dot += 1;
-                that.left += window.innerWidth;
-            }
-        }, 2000);
+        this.circle();
     }
 
     private circle(): void {
+        let that = this;
+        if (that.dot === 4) {
+            that.dot = 0;
+            that.left = 0;
+        } else if (that.dot < 4) {
+            that.dot += 1;
+            that.left -= window.innerWidth;
+        }
+        setTimeout(this.circle, 2000);
     }
 }
 </script>
@@ -80,16 +80,15 @@ export default class Home extends Vue {
 .slider-box {
     position: relative;
     overflow: hidden;
-    width: 100%;
-    height: 700px;
+    width: 500vw;
+    
     white-space: nowrap;
 }
 .slider-box > ul {
-    position: absolute;
-    left: 0px;
+    overflow: hidden;
+    height: 700px;
     margin: 0;
     padding: 0;
-    width: 500vw;
     transition: all 500ms ease-in-out;
 }
 .slider-box li {
