@@ -1,13 +1,13 @@
 <template>
     <main> 
         <div class="slider-container">
-            <section class="slider-box" :style="{ left: left + 'px' }">
+            <section class="slider-box">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li v-bind:style="{ display: dot === 0 ? 'block': 'none' }"></li>
+                    <li v-bind:style="{ display: dot === 1 ? 'block': 'none' }"></li>
+                    <li v-bind:style="{ display: dot === 2 ? 'block': 'none' }"></li>
+                    <li v-bind:style="{ display: dot === 3 ? 'block': 'none' }"></li>
+                    <li v-bind:style="{ display: dot === 4 ? 'block': 'none' }"></li>
                 </ul>
             </section>
             <div class="dot-box">
@@ -44,10 +44,8 @@ export default class Home extends Vue {
         let that = this;
         if (that.dot === 4) {
             that.dot = 0;
-            that.left = 0;
         } else if (that.dot < 4) {
             that.dot += 1;
-            that.left -= window.innerWidth;
         }
         setTimeout(this.circle, 2000);
     }
@@ -80,8 +78,7 @@ export default class Home extends Vue {
 .slider-box {
     position: relative;
     overflow: hidden;
-    width: 500vw;
-    
+    // width: 500vw;
     white-space: nowrap;
 }
 .slider-box > ul {
