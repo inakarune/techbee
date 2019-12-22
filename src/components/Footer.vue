@@ -48,4 +48,11 @@ footer p {
     text-align: right;
     vertical-align: bottom;
 }
+
+@media screen and (max-width: 415px) {
+    footer {
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
 </style>

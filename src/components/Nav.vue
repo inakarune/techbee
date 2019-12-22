@@ -6,6 +6,7 @@
         </ul>
         <nav>
             <h1 class="nav-logo"><router-link to="/">TECH<span>BEE</span></router-link></h1>
+            <div class="mobile-bar"><font-awesome-icon icon="bars" size="2x" color="black" /></div>
             <ul class="nav-menu">
                 <li>회사소개
                     <ul class="submenu-box">
@@ -31,6 +32,9 @@
     </header>
 </template>
 <style scoped lang="scss">
+.mobile-bar {
+    display: none;
+}
 body {
     margin: 0px;
 }
@@ -161,6 +165,47 @@ nav {
 }
 
 @media screen and (max-width: 415px) {
+    .mobile-bar {
+        display: block;
+        position: relative;
+        top: 19px;
+        right: 17px;
+    }
 
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        display: none;
+
+        & > li {
+            color: white;
+            width: 100%;
+            height: auto;
+
+            & > a {
+                color: white;
+            }
+        }
+    }
+
+    .submenu-box {
+        color: white;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .nav-menu li:nth-child(1):hover .submenu-box,.nav-menu li:nth-child(2):hover .submenu-box {
+        width: 100%;
+        position: relative;
+    }
+
+    .submenu-box li > a {
+        color: white;
+    }
 }
 </style>

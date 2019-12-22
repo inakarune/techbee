@@ -150,4 +150,25 @@ export default class Home extends Vue {
     text-align: center;
     line-height: 44px;
 }
+
+@media screen and (max-width: 415px) {
+    .slider-box ul {
+        height: 500px;
+    }
+    .slider-box li {
+        height: 500px;
+    }
+    .four-box {
+        flex-wrap: wrap;
+
+        & > li {
+            width: 40%;
+            height: auto;
+        }
+    }
+
+    .four-box li:nth-child(1), .four-box li:nth-child(2), .four-box li:nth-child(3) {
+        margin-right: 0;
+    }
+}
 </style>
