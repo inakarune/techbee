@@ -160,5 +160,7 @@ nav {
     border: 1px solid #e2e2e2;
 }
 
+@media screen and (max-width: 415px) {
 
+}
 </style>
