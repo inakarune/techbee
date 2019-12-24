@@ -49,4 +49,11 @@
         background-position: center;
     }
 }
+
+@media screen and (max-width: 415px) {
+    .product-list {
+        margin: 0;
+        width: auto;
+    }
+}
 </style>

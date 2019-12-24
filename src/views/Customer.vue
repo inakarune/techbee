@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div id="map" style="width:500px;height:400px;"></div>
+        <div id="map"></div>
         <ul class="customer-box">
             <li>
                 <font-awesome-icon icon="building" size="4x" color="gold" />
@@ -62,6 +62,8 @@ export default class Customer extends Vue {
 <style lang="scss">
 #map {
     margin: 30px auto;
+    width: 500px;
+    height: 400px;
 }
 .customer-box {
     display: flex;
@@ -79,5 +81,30 @@ export default class Customer extends Vue {
 
 .customer-box li:nth-child(1), .customer-box li:nth-child(2), .customer-box li:nth-child(3) {
     border-right: 1px solid #959595;
+}
+
+@media screen and (max-width: 415px) {
+    #map {
+        width: 100%;
+    }
+
+    .customer-box {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .customer-box li:nth-child(1), .customer-box li:nth-child(2), .customer-box li:nth-child(3) {
+        border-right: none;
+        border-bottom: 1px solid #959595;
+    }
+
+    .customer-box li {
+        width: 100%;
+        padding: 0;
+    }
+
+    .customer-box li:nth-child(2), .customer-box li:nth-child(3), .customer-box li:nth-child(4) {
+        padding-top: 34px;
+    }
 }
 </style>

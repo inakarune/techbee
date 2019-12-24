@@ -6,8 +6,8 @@
         </ul>
         <nav>
             <h1 class="nav-logo"><router-link to="/">TECH<span>BEE</span></router-link></h1>
-            <div class="mobile-bar"><font-awesome-icon icon="bars" size="2x" color="black" /></div>
-            <ul class="nav-menu">
+            <div class="mobile-bar" @click="mobile = !mobile"><font-awesome-icon icon="bars" size="2x" color="black" /></div>
+            <ul class="nav-menu" :style="{ display: mobile ? 'block': 'none' }">
                 <li>회사소개
                     <ul class="submenu-box">
                         <li><router-link to="/about/overview">대표이사 인사말</router-link></li>
@@ -27,10 +27,20 @@
                 <li><router-link to="#">다운로드</router-link></li>
                 <li><router-link to="/notice">공지사항</router-link></li>
                 <li><router-link to="/customer">고객문의</router-link></li>
+                <li><button @click="mobile = !mobile"><font-awesome-icon icon="times" size="2x" color="white" /></button></li>
             </ul>
+            
         </nav>
     </header>
 </template>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Nav extends Vue {
+    private mobile: boolean = false;
+}
+</script>
 <style scoped lang="scss">
 .mobile-bar {
     display: none;

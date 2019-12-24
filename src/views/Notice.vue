@@ -76,10 +76,12 @@ export default class Notice extends Vue {
 .total-box {
     display: flex;
     justify-content: space-between;
-    margin: 64px 5% 0px 5%;
+    width: 90%;
+    margin: 64px 50px 0px 50px;
 
     & > span {
         flex-grow: 2;
+        font-size: 12px;
     }
 }
 table {

@@ -6,11 +6,11 @@ import store from './store'
 import firebase from 'firebase'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFax, faEnvelope, faPhoneVolume, faBuilding, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faFax, faEnvelope, faPhoneVolume, faBuilding, faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { firebaseConfig } from './env/firebase'
 
-library.add(faFax, faEnvelope, faPhoneVolume, faBuilding, faBars)
+library.add(faFax, faEnvelope, faPhoneVolume, faBuilding, faBars, faTimes)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
