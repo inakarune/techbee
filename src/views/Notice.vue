@@ -117,4 +117,10 @@ td {
     color: white;
     border: none;
 }
+
+@media screen and (max-width: 415px) {
+    .login-btn {
+        margin-right: 10px;
+    }
+}
 </style>
