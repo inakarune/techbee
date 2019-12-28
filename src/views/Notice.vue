@@ -122,5 +122,13 @@ td {
     .login-btn {
         margin-right: 10px;
     }
+
+    table {
+        width: 100%;
+    }
+    
+    .notice {
+        margin: 0;
+    }
 }
 </style>
