@@ -119,6 +119,11 @@ td {
 }
 
 @media screen and (max-width: 415px) {
+    .total-box {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
     .login-btn {
         margin-right: 10px;
     }
@@ -126,7 +131,7 @@ td {
     table {
         width: 100%;
     }
-    
+
     .notice {
         margin: 0;
     }
