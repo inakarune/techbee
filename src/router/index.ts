@@ -21,6 +21,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/notice/write-mode',
+    name: 'write mode',
+    component: () => import('../views/WriteMode.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting

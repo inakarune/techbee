@@ -1,21 +1,36 @@
 <template>
+<div class="login-back">
     <div class="login-box">
         <form>
             <input type="text" placeholder="id">
             <input type="password" placeholder="password">
-            <input type="button" value="login">
+            <input type="button" value="login" @click="login">
         </form>
     </div>
+</div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import firebase from 'firebase';
 
 @Component
 export default class Login extends Vue {
+    private id: string = '';
+    private password: string = '';
 
+    private login() {
+        if (this.id === 'techbee' && this.password === 'techbee25') {
+            this.$router.push('/notice/write-mode');
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
+.login-back {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
 .login-box {
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;

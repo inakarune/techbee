@@ -1,7 +1,6 @@
 <template>
     <section>
         <Login v-if="toggle" />
-        <TextMode v-if="writeToggle" />
         <div class="sub-img">
         <ul>
             <li>공지사항</li>
@@ -33,17 +32,14 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Login from '@/views/Login.vue';
-import TextMode from '@/views/TextMode.vue';
 
 @Component({
     components: {
-        Login,
-        TextMode
+        Login
     }
 })
 export default class Notice extends Vue {
-    private toggle: boolean = false;
-    private writeToggle: boolean = false;
+    private toggle: boolean = true;
 }
 </script>
 <style lang="scss">
