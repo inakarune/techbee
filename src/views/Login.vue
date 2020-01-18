@@ -18,7 +18,7 @@ export default class Login extends Vue {
     private id: string = '';
     private password: string = '';
 
-    private login() {
+    private login(): void {
         if (this.id === 'techbee' && this.password === 'techbee25') {
             this.$router.push('/notice/write-mode');
         }
