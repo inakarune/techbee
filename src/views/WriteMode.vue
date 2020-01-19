@@ -2,7 +2,7 @@
 <div>
     <div class="write-mode">
         <input type="text" v-model="title" class="title-input">
-        <textarea v-model="content" class="content-input"></textarea>
+        <textarea v-model="content" class="content-input" placeholder="Enter your text"></textarea>
         <button @click="register" class="register-btn">Register</button>
     </div>
 </div>

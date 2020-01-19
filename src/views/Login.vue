@@ -2,8 +2,8 @@
 <div class="login-back">
     <div class="login-box">
         <form>
-            <input type="text" placeholder="id">
-            <input type="password" placeholder="password">
+            <input type="text" placeholder="id" v-model="id">
+            <input type="password" placeholder="password" v-model="password">
             <input type="button" value="login" @click="login">
         </form>
     </div>
